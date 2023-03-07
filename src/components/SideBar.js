@@ -1,10 +1,8 @@
 import React from "react";
-import { Flex, Box, Link, Image, Text } from "rebass";
+import { Flex, Box, Image, Text } from "rebass";
 
 import { Link as RebassLink } from "rebass";
 import { Link as RouterLink } from "react-router-dom";
-
-import logo from "../assets/logo.png";
 
 const SideBar = ({
   backgroundColor,
@@ -34,7 +32,7 @@ const SideBar = ({
     >
       <Box px={3} py={4}>
         <Flex alignItems="center" justifyContent="center">
-          <Image src={logo} alt="logo" width={50} height={50} />
+          <Image src="./images/logo.png" alt="logo" width={150} height={50} />
         </Flex>
         <Text as="h1" fontSize={[3, 4]} fontWeight="bold" my={3}>
           {title}

@@ -1,87 +1,92 @@
 import { Heading } from "rebass";
+import { useSelector } from "react-redux";
 
 import EmployeeTable from "../components/EmployeeTable";
 import ButtonComponent from "../components/ButtonComponent";
+import { selectAllEmployees } from "../redux/reducers/employeeReducer";
 
-const employees = [
-  {
-    id: 1,
-    firstName: "John",
-    lastName: "Doe",
-    age: 32,
-    gender: "Male",
-    height: "5'10\"",
-  },
-  {
-    id: 2,
-    firstName: "Jane",
-    lastName: "Doe",
-    age: 28,
-    gender: "Female",
-    height: "5'5\"",
-  },
-  {
-    id: 3,
-    firstName: "Bob",
-    lastName: "Smith",
-    age: 45,
-    gender: "Male",
-    height: "6'0\"",
-  },
-  {
-    id: 4,
-    firstName: "John",
-    lastName: "Doe",
-    age: 32,
-    gender: "Male",
-    height: "5'10\"",
-  },
-  {
-    id: 4,
-    firstName: "Jane",
-    lastName: "Doe",
-    age: 28,
-    gender: "Female",
-    height: "5'5\"",
-  },
-  {
-    id: 6,
-    firstName: "Bob",
-    lastName: "Smith",
-    age: 45,
-    gender: "Male",
-    height: "6'0\"",
-  },
-  {
-    id: 7,
-    firstName: "John",
-    lastName: "Doe",
-    age: 32,
-    gender: "Male",
-    height: "5'10\"",
-  },
-  {
-    id: 8,
-    firstName: "Jane",
-    lastName: "Doe",
-    age: 28,
-    gender: "Female",
-    height: "5'5\"",
-  },
-  {
-    id: 9,
-    firstName: "Bob",
-    lastName: "Smith",
-    age: 45,
-    gender: "Male",
-    height: "6'0\"",
-  },
-  // add more employees here...
-];
+// const employees = [
+//   {
+//     id: 1,
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 32,
+//     gender: "Male",
+//     height: "5'10\"",
+//   },
+//   {
+//     id: 2,
+//     firstName: "Jane",
+//     lastName: "Doe",
+//     age: 28,
+//     gender: "Female",
+//     height: "5'5\"",
+//   },
+//   {
+//     id: 3,
+//     firstName: "Bob",
+//     lastName: "Smith",
+//     age: 45,
+//     gender: "Male",
+//     height: "6'0\"",
+//   },
+//   {
+//     id: 4,
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 32,
+//     gender: "Male",
+//     height: "5'10\"",
+//   },
+//   {
+//     id: 4,
+//     firstName: "Jane",
+//     lastName: "Doe",
+//     age: 28,
+//     gender: "Female",
+//     height: "5'5\"",
+//   },
+//   {
+//     id: 6,
+//     firstName: "Bob",
+//     lastName: "Smith",
+//     age: 45,
+//     gender: "Male",
+//     height: "6'0\"",
+//   },
+//   {
+//     id: 7,
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 32,
+//     gender: "Male",
+//     height: "5'10\"",
+//   },
+//   {
+//     id: 8,
+//     firstName: "Jane",
+//     lastName: "Doe",
+//     age: 28,
+//     gender: "Female",
+//     height: "5'5\"",
+//   },
+//   {
+//     id: 9,
+//     firstName: "Bob",
+//     lastName: "Smith",
+//     age: 45,
+//     gender: "Male",
+//     height: "6'0\"",
+//   },
+//   // add more employees here...
+// ];
 
 
 
 function HomePage() {
+
+const employees  = useSelector(selectAllEmployees)
+
   return (
     <>
       <Heading
